@@ -16,6 +16,10 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 // Server Run
 app.listen(process.env.PORT, () => {
   console.log(`Server is working on http://localhost:${process.env.PORT}`);
